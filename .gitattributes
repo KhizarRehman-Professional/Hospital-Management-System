@@ -1,0 +1,40 @@
+## ⚙️ .gitattributes
+
+**Download:** [.gitattributes](sandbox:///mnt/agents/output/.gitattributes)
+
+```gitattributes
+# Force C++ as the primary detected language
+# Hide non-code files from GitHub language statistics
+
+# C++ source files - force detectable
+*.cpp linguist-detectable=true
+*.h linguist-detectable=true
+*.hpp linguist-detectable=true
+*.c linguist-detectable=true
+
+# Documentation - excluded from language stats
+*.md linguist-documentation
+LICENSE linguist-documentation
+CHANGELOG linguist-documentation
+CONTRIBUTING linguist-documentation
+
+# Compiled binaries - generated (excluded)
+*.exe linguist-generated
+*.out linguist-generated
+*.o linguist-generated
+*.obj linguist-generated
+*.dll linguist-generated
+*.so linguist-generated
+*.a linguist-generated
+*.lib linguist-generated
+
+# Build files - vendored (excluded)
+Makefile linguist-vendored
+CMakeLists.txt linguist-vendored
+cmake_install.cmake linguist-vendored
+
+# IDE files - vendored (excluded)
+.vscode/* linguist-vendored
+.idea/* linguist-vendored
+*.sln linguist-vendored
+*.vcxproj linguist-vendored
